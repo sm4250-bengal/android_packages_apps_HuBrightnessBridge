@@ -1,0 +1,156 @@
+{
+  "files": [
+    {
+      "git_blob": "a0af71d0dc391d3131d6fb436fe8508ea922e106",
+      "last_change_author": "wifi133",
+      "last_change_commit": "03f72bfa4b43673688e617ca3c05486248833e6b",
+      "mode": "100644",
+      "path": "Android.bp",
+      "sha256": "2c05b6a3606ba1ff00cd5ab8f6c68e39fc8fefe783e32d13839a77c066e36729",
+      "size": 2303,
+      "source": "platform/packages/apps/HuBrightnessBridge/Android.bp"
+    },
+    {
+      "git_blob": "829405de9d1932746a3f52581301dc2574cc6339",
+      "last_change_author": "wifi133",
+      "last_change_commit": "209b7702ae66365324d70642fe11d59bcec1571c",
+      "mode": "100644",
+      "path": "AndroidManifest.xml",
+      "sha256": "83eb816c23203457ad690a9f759555b2ee866c4629ec198ce2d27ff7c47190b4",
+      "size": 2157,
+      "source": "platform/packages/apps/HuBrightnessBridge/AndroidManifest.xml"
+    },
+    {
+      "git_blob": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+      "last_change_author": "wifi133",
+      "last_change_commit": "631cb843483a44f92c0b451dad8a0632e62ef269",
+      "mode": "100644",
+      "path": "LICENSES/Apache-2.0.txt",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "size": 11358,
+      "source": "platform/source-release/licenses/Apache-2.0.txt"
+    },
+    {
+      "git_blob": "ce9af609f433a5413a12fda6acc03e581b9d1e14",
+      "last_change_author": "wifi133",
+      "last_change_commit": "239a7c4eaef9f3418e3201397e0e5fbb82253a2a",
+      "mode": "100644",
+      "path": "privapp-permissions-com.meinte.hubrightnessbridge.xml",
+      "sha256": "307ba01f6d3a41f44261b32ae7669c58015e2fb07b3e8f789dd5316ac86f73e8",
+      "size": 325,
+      "source": "platform/packages/apps/HuBrightnessBridge/privapp-permissions-com.meinte.hubrightnessbridge.xml"
+    },
+    {
+      "git_blob": "ee3ea87338dbebabc34588914de6b18406af7ce7",
+      "last_change_author": "wifi133",
+      "last_change_commit": "209b7702ae66365324d70642fe11d59bcec1571c",
+      "mode": "100644",
+      "path": "res/drawable/ic_bengal_launcher_foreground.xml",
+      "sha256": "21b492890022b6c55392b2edf7c01035718d872d19d0e7d40e680742c5bbcb41",
+      "size": 880,
+      "source": "platform/packages/apps/HuBrightnessBridge/res/drawable/ic_bengal_launcher_foreground.xml"
+    },
+    {
+      "git_blob": "47ac287df0a6c68e9771a5343224a42b05f94f6a",
+      "last_change_author": "wifi133",
+      "last_change_commit": "209b7702ae66365324d70642fe11d59bcec1571c",
+      "mode": "100644",
+      "path": "res/mipmap-anydpi-v26/ic_bengal_launcher.xml",
+      "sha256": "d28a7dec5494b030592c78e1b70051a5dd581b010aa33c1044b10c998d764e87",
+      "size": 360,
+      "source": "platform/packages/apps/HuBrightnessBridge/res/mipmap-anydpi-v26/ic_bengal_launcher.xml"
+    },
+    {
+      "git_blob": "f0761747d2581e433a430d19844f16298142efa0",
+      "last_change_author": "wifi133",
+      "last_change_commit": "209b7702ae66365324d70642fe11d59bcec1571c",
+      "mode": "100644",
+      "path": "res/mipmap-anydpi-v33/ic_bengal_launcher.xml",
+      "sha256": "13c5b8c1e6b131322e5b4e0b9df27ab302f3f9d83ab7b887e680bbc59fa0693e",
+      "size": 434,
+      "source": "platform/packages/apps/HuBrightnessBridge/res/mipmap-anydpi-v33/ic_bengal_launcher.xml"
+    },
+    {
+      "git_blob": "c2b429da2a07b8b678f1e4501d244627486bf5d7",
+      "last_change_author": "wifi133",
+      "last_change_commit": "209b7702ae66365324d70642fe11d59bcec1571c",
+      "mode": "100644",
+      "path": "res/mipmap-anydpi/ic_bengal_launcher.xml",
+      "sha256": "617f50a4e23dc58a184b54e98d46ab05f49395d8138a3c147a4b2f81fd9ee72c",
+      "size": 1040,
+      "source": "platform/packages/apps/HuBrightnessBridge/res/mipmap-anydpi/ic_bengal_launcher.xml"
+    },
+    {
+      "git_blob": "8ddb440d6985c03be0cc9f02ad34a06a80087359",
+      "last_change_author": "wifi133",
+      "last_change_commit": "209b7702ae66365324d70642fe11d59bcec1571c",
+      "mode": "100644",
+      "path": "res/values/bengal_launcher_colors.xml",
+      "sha256": "e193bd65590483f173647b2a67f3a439e8f8899c6168bc86dbddbac3a9320f88",
+      "size": 208,
+      "source": "platform/packages/apps/HuBrightnessBridge/res/values/bengal_launcher_colors.xml"
+    },
+    {
+      "git_blob": "43eb5396b02dbb68cc23ba63cf659dcde0d76a66",
+      "last_change_author": "wifi133",
+      "last_change_commit": "239a7c4eaef9f3418e3201397e0e5fbb82253a2a",
+      "mode": "100644",
+      "path": "src/com/meinte/hubrightnessbridge/BridgeApplication.java",
+      "sha256": "4a24252961cfb1eb19d91ae3a02dad5d5c0d1455123ec657647160d066a260d3",
+      "size": 6740,
+      "source": "platform/packages/apps/HuBrightnessBridge/src/com/meinte/hubrightnessbridge/BridgeApplication.java"
+    },
+    {
+      "git_blob": "276dcd1cfb4bebb395bf3e4f64fd7dc76c590f9e",
+      "last_change_author": "wifi133",
+      "last_change_commit": "239a7c4eaef9f3418e3201397e0e5fbb82253a2a",
+      "mode": "100644",
+      "path": "src/com/meinte/hubrightnessbridge/domain/BridgePolicy.java",
+      "sha256": "64a58675aab09cd24fe84d5a4cd58e5b5213fa781b4fee5e84e6c6165eab3b96",
+      "size": 4297,
+      "source": "platform/packages/apps/HuBrightnessBridge/src/com/meinte/hubrightnessbridge/domain/BridgePolicy.java"
+    },
+    {
+      "git_blob": "ae1136436dc2f9c0de1e96485cf0f2cc013b7d2d",
+      "last_change_author": "wifi133",
+      "last_change_commit": "239a7c4eaef9f3418e3201397e0e5fbb82253a2a",
+      "mode": "100644",
+      "path": "src/com/meinte/hubrightnessbridge/domain/DimCurve.java",
+      "sha256": "16938385074df12b89df2874a72d089e710a2cd441871b0f77bced882f496d92",
+      "size": 4964,
+      "source": "platform/packages/apps/HuBrightnessBridge/src/com/meinte/hubrightnessbridge/domain/DimCurve.java"
+    },
+    {
+      "git_blob": "8d7da24b0f5293e00e37348e2e2c1a2b72dfe312",
+      "last_change_author": "wifi133",
+      "last_change_commit": "239a7c4eaef9f3418e3201397e0e5fbb82253a2a",
+      "mode": "100644",
+      "path": "src/com/meinte/hubrightnessbridge/domain/DimTarget.java",
+      "sha256": "8f3e4a09ab2446326cfe634b0735cb506e09263c191391d6aed47eaeab8ef841",
+      "size": 1724,
+      "source": "platform/packages/apps/HuBrightnessBridge/src/com/meinte/hubrightnessbridge/domain/DimTarget.java"
+    },
+    {
+      "git_blob": "df4d941681462b3b8a9f0c60ac5b3376475c4659",
+      "last_change_author": "wifi133",
+      "last_change_commit": "239a7c4eaef9f3418e3201397e0e5fbb82253a2a",
+      "mode": "100644",
+      "path": "tests/src/com/meinte/hubrightnessbridge/domain/BridgePolicyTest.java",
+      "sha256": "3236ad1bc48b0c7c977db541962604a4144a07a5bbee780fce0544bb9f430ec9",
+      "size": 5529,
+      "source": "platform/packages/apps/HuBrightnessBridge/tests/src/com/meinte/hubrightnessbridge/domain/BridgePolicyTest.java"
+    },
+    {
+      "git_blob": "4cdfaa227323eff12fd0fb7e0a611e8a950b1387",
+      "last_change_author": "wifi133",
+      "last_change_commit": "239a7c4eaef9f3418e3201397e0e5fbb82253a2a",
+      "mode": "100644",
+      "path": "tests/src/com/meinte/hubrightnessbridge/domain/DimCurveTest.java",
+      "sha256": "a72db58ec2bc31b48f4da84db511a2507660be5aa7d685e1e0d11df44b83d4dc",
+      "size": 6688,
+      "source": "platform/packages/apps/HuBrightnessBridge/tests/src/com/meinte/hubrightnessbridge/domain/DimCurveTest.java"
+    }
+  ],
+  "format_version": 1,
+  "origin_commit": "2a9fe6ca030794d4f528ea48507a5f9079688e8b"
+}

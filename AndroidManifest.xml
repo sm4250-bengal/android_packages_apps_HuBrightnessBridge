@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright (C) 2026 The XYAUTO device-3 project
+    SPDX-License-Identifier: Apache-2.0
+
+    HuBrightnessBridge: makes the Android brightness slider drive AOSP Extra Dim,
+    because device 3 has no reachable backlight dimmer
+    (docs/research/2026-09-10-mcu-backlight-brightness.md). Installed only with
+    BENGAL_EXTRA_DIM=1 (device.mk), so with the knob off there is no app and no write.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.meinte.hubrightnessbridge">
+
+    <!--
+        NO android:sharedUserId, same reasoning as HuButtons/HuRadio: user=system
+        would put the app in system_app. With none, a platform-signed priv-app with
+        no seapp_contexts line of its own lands in AOSP's platform_app, which is all
+        this needs (one ContentObserver, Settings reads/writes via system_server).
+    -->
+
+    <!--
+        The one permission. It writes the three Settings.Secure reduce_bright_colors
+        keys that ColorDisplayService observes. signature|privileged: granted by the
+        platform certificate and allowlisted in privapp-permissions for
+        ro.control_privapp_permissions=enforce. Reading screen_brightness and the
+        @hide keys needs nothing (system app, SettingsProvider enforceSettingReadable).
+    -->
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
+
+    <!--
+        persistent: AMS starts it at boot and keeps it alive, which a ContentObserver
+        needs. directBootAware: it can start before user unlock; bengal3 has no lock
+        screen, but the boot re-assert should not wait for one. No activity, service,
+        receiver or provider: nothing to launch and nothing exported.
+    -->
+    <application
+        android:name=".BridgeApplication"
+        android:icon="@mipmap/ic_bengal_launcher"
+        android:roundIcon="@mipmap/ic_bengal_launcher"
+        android:label="Brightness Bridge"
+        android:persistent="true"
+        android:directBootAware="true"
+        android:defaultToDeviceProtectedStorage="true"
+        android:allowBackup="false" />
+
+</manifest>

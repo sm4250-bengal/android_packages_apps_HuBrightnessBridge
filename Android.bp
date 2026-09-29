@@ -1,0 +1,60 @@
+// Copyright (C) 2026 The XYAUTO device-3 project
+// SPDX-License-Identifier: Apache-2.0
+//
+// HuBrightnessBridge: the Android brightness slider drives AOSP Extra Dim.
+// Device 3 has no reachable backlight dimmer, so screen_brightness is stored and
+// nothing acts on it; this persistent app maps it onto reduce_bright_colors.
+// Design: docs/research/2026-09-10-mcu-backlight-brightness.md (§ slider bridge).
+//
+// Selected only by BENGAL_EXTRA_DIM=1 (device.mk), next to the overlay that makes
+// Extra Dim work at all. Knob off: not in PRODUCT_PACKAGES, no app, no write.
+//
+// Shape: BengalPower's (persistent own-UID privileged app with a privapp allowlist)
+// for the product side, HuButtons' (java_library_host + java_test_host) for the
+// host-tested domain.
+
+package {
+    default_applicable_licenses: ["Android-Apache-2.0"],
+}
+
+android_app {
+    name: "HuBrightnessBridge",
+    manifest: "AndroidManifest.xml",
+    srcs: ["src/**/*.java"],
+    // Public SDK only (the desk gate compiles the edge against the public
+    // android.jar). platform_apis matches the sibling apps and is what
+    // certificate "platform" + privileged expect here.
+    certificate: "platform",
+    platform_apis: true,
+    privileged: true,
+    system_ext_specific: true,
+    // The privapp allowlist is installed by PRODUCT_COPY_FILES in device.mk, NOT
+    // by a prebuilt_etc here: the per-file mirror hands Soong a symlink and
+    // prebuilt_etc preserves it, so the image shipped a dangling host-path link
+    // (D3-0141 flight 1, 2026-09-14: system_server crash loop). PRODUCT_COPY_FILES
+    // dereferences (measured 2026-08-31).
+    optimize: {
+        enabled: false,
+    },
+}
+
+// The mapping and the write policy, tested on the host. domain/ imports nothing
+// from android.*; the app compiles the same sources again through its srcs glob
+// (HuButtons' deliberate duplication, for the same reason).
+java_library_host {
+    name: "HuBrightnessBridgeDomain-host",
+    srcs: ["src/com/meinte/hubrightnessbridge/domain/**/*.java"],
+}
+
+java_test_host {
+    name: "HuBrightnessBridgeDomainTests",
+    srcs: ["tests/src/**/*.java"],
+    static_libs: [
+        "HuBrightnessBridgeDomain-host",
+        "junit",
+    ],
+    test_options: {
+        unit_test: true,
+    },
+    test_suites: ["general-tests"],
+}
